@@ -1,0 +1,136 @@
+/* Custom CSS 2 — written from scratch for the swimming page (no Bootstrap) */
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #03263f 0%, #075f8c 55%, #0b89b5 100%);
+  background-attachment: fixed;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #eaf6fb;
+  line-height: 1.6;
+}
+
+.top-nav {
+  background-color: #021a2c;
+  padding: 0.9rem 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.top-nav a {
+  color: #7fd4f5;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-right: 1.4rem;
+}
+
+.top-nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.content-block {
+  max-width: 880px;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
+  background-color: rgba(2, 26, 44, 0.75);
+  border: 1px solid #1d6f96;
+  border-radius: 12px;
+}
+
+h1 {
+  font-family: Verdana, Arial, sans-serif;
+  color: #ffd166;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 2.5rem 1rem 0.5rem 1rem;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #a8dcef;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: Verdana, Arial, sans-serif;
+  color: #7fd4f5;
+  border-bottom: 2px solid #ffd166;
+  padding-bottom: 0.3rem;
+}
+
+.feature-photo {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 1rem auto;
+  border-radius: 10px;
+  border: 3px solid #ffd166;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #a8dcef;
+}
+
+ol.race-plan > li {
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  color: #ffd166;
+}
+
+ol.race-plan ul {
+  font-weight: normal;
+  color: #eaf6fb;
+  margin-top: 0.3rem;
+}
+
+.video-frame {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.back-to-top {
+  display: inline-block;
+  background-color: #ffd166;
+  color: #03263f;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.back-to-top:hover {
+  background-color: #ffe49d;
+}
+
+.game-link {
+  display: block;
+  text-align: center;
+  background: linear-gradient(90deg, #ff7847, #ffd166);
+  color: #021a2c;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+footer.scratch-footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem 1rem;
+  font-size: 0.9rem;
+  color: #a8dcef;
+}
+
+footer.scratch-footer a {
+  color: #7fd4f5;
+}
