@@ -4,7 +4,8 @@ body {
   margin: 0;
   background: linear-gradient(180deg, #03263f 0%, #075f8c 55%, #0b89b5 100%);
   background-attachment: fixed;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
   color: #eaf6fb;
   line-height: 1.6;
 }
@@ -18,7 +19,8 @@ body {
 
 .top-nav a {
   color: #7fd4f5;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
   margin-right: 1.4rem;
@@ -39,7 +41,9 @@ body {
 }
 
 h1 {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+  font-weight: 200;
+  letter-spacing: -0.01em;
   color: #ffd166;
   font-size: 2.6rem;
   text-align: center;
@@ -54,7 +58,8 @@ h1 {
 }
 
 h2 {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+  font-weight: 200;
   color: #7fd4f5;
   border-bottom: 2px solid #ffd166;
   padding-bottom: 0.3rem;
@@ -77,7 +82,7 @@ h2 {
 
 ol.race-plan > li {
   margin-bottom: 0.8rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #ffd166;
 }
 
@@ -99,8 +104,8 @@ ol.race-plan ul {
   display: inline-block;
   background-color: #ffd166;
   color: #03263f;
-  font-family: Verdana, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
   padding: 0.5rem 1.1rem;
   border-radius: 8px;
   text-decoration: none;
@@ -116,9 +121,9 @@ ol.race-plan ul {
   text-align: center;
   background: linear-gradient(90deg, #ff7847, #ffd166);
   color: #021a2c;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
   padding: 1rem;
   border-radius: 10px;
   text-decoration: none;

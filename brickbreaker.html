@@ -4,18 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brick Breaker | Sam Ellis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400;600&display=swap" rel="stylesheet">
 <style>
   body {
     margin: 0;
     background: #1b1f2a;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
     color: #f0f0f0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
   }
-  h1 { color: #ffffff; margin: 1.2rem 0 0.3rem 0; font-weight: 600; letter-spacing: 1px; }
+  h1 { color: #ffffff; margin: 1.2rem 0 0.3rem 0; font-weight: 200; letter-spacing: 1px; }
   .hud {
     display: flex;
     gap: 2rem;
@@ -238,10 +242,10 @@
     ctx.strokeRect(W / 2 - 250, H / 2 - 90, 500, 180);
     ctx.textAlign = 'center';
     ctx.fillStyle = '#5ec8ff';
-    ctx.font = 'bold 30px Arial';
+    ctx.font = '600 30px "Libre Franklin", Arial, sans-serif';
     ctx.fillText(lines[0], W / 2, H / 2 - 30);
     ctx.fillStyle = '#f0f0f0';
-    ctx.font = '16px Arial';
+    ctx.font = '400 16px "Libre Franklin", Arial, sans-serif';
     lines.slice(1).forEach((t, i) => ctx.fillText(t, W / 2, H / 2 + 10 + i * 28));
     ctx.restore();
   }
