@@ -92,6 +92,23 @@ ol.race-plan ul {
   margin-top: 0.3rem;
 }
 
+/* The Paris 2024 dashboard has a fixed authored size; give its section more
+   room and let it scroll horizontally on narrow screens instead of clipping. */
+#data {
+  max-width: 1180px;
+}
+
+.viz-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+}
+
+.viz-wrap tableau-viz {
+  display: block;
+  margin: 0 auto;
+}
+
 .video-frame {
   display: block;
   margin: 1.5rem auto;
