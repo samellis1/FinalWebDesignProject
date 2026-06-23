@@ -40,7 +40,7 @@
     #desktop {
       position: fixed;
       inset: 0;
-      background: #d9c8bd url("images/headshot.jpg") center 30% / cover no-repeat;
+      background: #6b7d8c url("images/wallpaper.jpg") center center / cover no-repeat;
     }
     /* soft brightening + peach vignette to match the reference vibe */
     #desktop::before {
@@ -51,16 +51,6 @@
         radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0) 40%, rgba(255, 224, 214, 0.35) 100%),
         linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.12));
       pointer-events: none;
-    }
-    /* glowing inner frame (the peachy border on bychudy) */
-    #desktop::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      box-shadow: inset 0 0 6px 3px rgba(255, 196, 178, 0.85),
-                  inset 0 0 60px 8px rgba(255, 210, 195, 0.35);
-      pointer-events: none;
-      z-index: 9000;
     }
 
     /* ---- Top menu bar ---- */
@@ -299,7 +289,7 @@
     <span class="mb-item clock" id="clock">—</span>
   </div>
 
-  <div id="hint">Double-click an icon to open it &middot; drag windows by their title bar</div>
+  <div id="hint">Click an icon to open it &middot; drag windows by their title bar</div>
 
   <!-- ===================== DESKTOP ICONS ===================== -->
   <!-- positions are set inline so they "scatter" like a real desktop -->
@@ -319,7 +309,7 @@
   </div>
 
   <div class="icon" data-window="applysy" style="top:90px; left:360px;">
-    <div class="glyph">&#128640;</div>
+    <div class="glyph" style="background:#ffffff;"><img src="images/applysy.svg" alt="Applysy" style="object-fit:contain; padding:6px;"></div>
     <div class="label">Applysy</div>
   </div>
 
@@ -336,6 +326,11 @@
   <div class="icon" data-window="awards" style="top:420px; left:280px;">
     <div class="glyph"><img src="images/freestyle.jpg" alt="Swimming"></div>
     <div class="label">Awards &amp; Interests</div>
+  </div>
+
+  <div class="icon" data-href="https://samellis1.github.io/InductiveReasoningGame" style="top:420px; right:110px;">
+    <div class="glyph">&#129513;</div>
+    <div class="label">Inductive Reasoning Game</div>
   </div>
 
   <div class="icon" data-window="contact" style="top:230px; right:90px;">
@@ -511,7 +506,7 @@
       <p>&#128279; <a href="https://www.linkedin.com/in/samuel-ellis-53136b392" target="_blank" rel="noopener">LinkedIn</a></p>
       <p>&#128187; <a href="https://github.com/samellis1" target="_blank" rel="noopener">GitHub</a></p>
       <div class="btn-row">
-        <a class="pill-btn" href="resume.html">View Résumé</a>
+        <a class="pill-btn" href="resume.html">View Resume</a>
         <a class="pill-btn ghost" href="index.html">Classic Site</a>
       </div>
     </div>
@@ -520,17 +515,23 @@
   <!-- ===================== DOCK ===================== -->
   <div id="dock">
     <div class="dock-item d-li" onclick="window.open('https://www.linkedin.com/in/samuel-ellis-53136b392','_blank')">
-      <span class="tip">LinkedIn</span>&#128100;
+      <span class="tip">LinkedIn</span>
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+      </svg>
     </div>
     <div class="dock-item d-gh" onclick="window.open('https://github.com/samellis1','_blank')">
-      <span class="tip">GitHub</span>&#128187;
+      <span class="tip">GitHub</span>
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-label="GitHub">
+        <path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.21 3.44 9.63 8.21 11.19.6.11.82-.25.82-.56 0-.28-.01-1.02-.02-2-3.34.71-4.04-1.58-4.04-1.58-.55-1.37-1.34-1.74-1.34-1.74-1.09-.73.08-.72.08-.72 1.21.08 1.84 1.22 1.84 1.22 1.07 1.8 2.81 1.28 3.5.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.31-5.47-5.83 0-1.29.47-2.34 1.24-3.17-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.21a11.6 11.6 0 016 0c2.28-1.53 3.29-1.21 3.29-1.21.66 1.65.24 2.87.12 3.17.77.83 1.23 1.88 1.23 3.17 0 4.53-2.81 5.53-5.49 5.82.43.36.81 1.08.81 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.83.56C20.57 21.91 24 17.5 24 12.29 24 5.78 18.63.5 12 .5z"/>
+      </svg>
     </div>
     <div class="dock-item d-mail" onclick="location.href='mailto:sbellis@byu.edu'">
       <span class="tip">Email</span>&#9993;&#65039;
     </div>
     <div class="dock-sep"></div>
     <div class="dock-item d-res" onclick="location.href='resume.html'">
-      <span class="tip">Résumé</span>&#128196;
+      <span class="tip">Resume</span>&#128196;
     </div>
     <div class="dock-item d-game" onclick="location.href='brickbreaker.html'">
       <span class="tip">Brick Breaker</span>&#127918;
@@ -573,13 +574,16 @@
     /* ---- desktop icon selection + double-click to open ---- */
     var icons = document.querySelectorAll('.icon');
     icons.forEach(function (icon) {
+      // single click selects, highlights, and opens
       icon.addEventListener('click', function (e) {
         e.stopPropagation();
         icons.forEach(function (i) { i.classList.remove('selected'); });
         icon.classList.add('selected');
-      });
-      icon.addEventListener('dblclick', function () {
-        openWindow(icon.dataset.window);
+        if (icon.dataset.href) {
+          window.open(icon.dataset.href, '_blank', 'noopener');
+        } else {
+          openWindow(icon.dataset.window);
+        }
       });
     });
     // click empty desktop to deselect
