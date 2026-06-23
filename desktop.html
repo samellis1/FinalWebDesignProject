@@ -53,34 +53,6 @@
       pointer-events: none;
     }
 
-    /* ---- Top menu bar ---- */
-    #menubar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 0 16px;
-      background: rgba(255, 255, 255, 0.28);
-      backdrop-filter: blur(20px) saturate(160%);
-      -webkit-backdrop-filter: blur(20px) saturate(160%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-      color: #fff;
-      font-size: 13px;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.35);
-      z-index: 8000;
-      user-select: none;
-    }
-    #menubar .apple { font-size: 15px; }
-    #menubar .mb-item { font-weight: 500; }
-    #menubar .mb-item.bold { font-weight: 700; }
-    #menubar .spacer { margin-left: auto; }
-    #menubar .clock { font-variant-numeric: tabular-nums; }
-    @media (max-width: 600px) {
-      #menubar .hide-sm { display: none; }
-    }
-
     /* ---- Desktop icons ---- */
     .icon {
       position: absolute;
@@ -276,18 +248,6 @@
 <body>
 
   <div id="desktop"></div>
-
-  <!-- ===================== MENU BAR ===================== -->
-  <div id="menubar">
-    <span class="apple">&#63743;</span>
-    <span class="mb-item bold">Samuel Ellis</span>
-    <span class="mb-item hide-sm">File</span>
-    <span class="mb-item hide-sm">Edit</span>
-    <span class="mb-item hide-sm">View</span>
-    <span class="spacer"></span>
-    <span class="mb-item hide-sm">Provo, UT</span>
-    <span class="mb-item clock" id="clock">—</span>
-  </div>
 
   <div id="hint">Click an icon to open it &middot; drag windows by their title bar</div>
 
@@ -533,23 +493,9 @@
     <div class="dock-item d-res" onclick="location.href='resume.html'">
       <span class="tip">Resume</span>&#128196;
     </div>
-    <div class="dock-item d-game" onclick="location.href='brickbreaker.html'">
-      <span class="tip">Brick Breaker</span>&#127918;
-    </div>
   </div>
 
   <script>
-    /* ---- live menu-bar clock ---- */
-    function tick() {
-      var now = new Date();
-      var opts = { weekday: 'short', month: 'short', day: 'numeric' };
-      var date = now.toLocaleDateString('en-US', opts);
-      var time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
-      document.getElementById('clock').textContent = date + '  ' + time;
-    }
-    tick();
-    setInterval(tick, 1000 * 30);
-
     /* ---- window z-index stacking ---- */
     var zTop = 100;
     function bringToFront(win) { win.style.zIndex = ++zTop; }
