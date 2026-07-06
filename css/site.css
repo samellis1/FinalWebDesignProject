@@ -1,17 +1,18 @@
 /* Custom CSS 1 — styles layered on top of Bootstrap for the professional pages */
 
 :root {
-  --navy: #0d2b45;
-  --navy-light: #14406b;
-  --accent: #2f80c2;
-  --paper: #f7f9fb;
+  --ink: #293241;        /* Jet Black */
+  --dusk: #3d5a80;       /* Dusk Blue */
+  --powder: #98c1d9;     /* Powder Blue */
+  --accent: #ee6c4d;     /* Burnt Peach */
+  --paper: #e0fbfc;      /* Light Cyan */
 }
 
 body {
   font-family: "Libre Franklin", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   background-color: var(--paper);
-  color: #212529;
+  color: var(--ink);
 }
 
 /* Type hierarchy: ExtraLight 200 for large display headings,
@@ -33,17 +34,17 @@ b {
 }
 
 .navbar-custom {
-  background-color: var(--navy);
+  background-color: var(--ink);
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, var(--accent) 100%);
+  background: #3d5a80;
   color: #ffffff;
   padding: 6rem 0 5rem 0;
 }
 
 .hero .lead {
-  color: #d7e6f4;
+  color: var(--paper);
 }
 
 .hero-row {
@@ -67,8 +68,8 @@ b {
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
-  border: 4px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 6px 20px rgba(13, 43, 69, 0.35);
+  border: 4px solid rgba(224, 251, 252, 0.85);
+  box-shadow: 0 6px 20px rgba(41, 50, 65, 0.35);
 }
 
 @media (max-width: 575.98px) {
@@ -79,7 +80,7 @@ b {
 }
 
 .section-title {
-  color: var(--navy);
+  color: var(--dusk);
   border-bottom: 3px solid var(--accent);
   display: inline-block;
   padding-bottom: 0.25rem;
@@ -89,24 +90,24 @@ b {
 .card-highlight {
   border: none;
   border-top: 4px solid var(--accent);
-  box-shadow: 0 2px 10px rgba(13, 43, 69, 0.08);
+  box-shadow: 0 2px 10px rgba(41, 50, 65, 0.08);
   height: 100%;
 }
 
 .timeline-org {
-  color: var(--navy);
+  color: var(--dusk);
   font-weight: 600;
   margin-bottom: 0;
 }
 
 .timeline-meta {
-  color: #6c757d;
+  color: #5f6b7a;
   font-size: 0.9rem;
 }
 
 .skill-badge {
-  background-color: #e3eef7;
-  color: var(--navy);
+  background-color: var(--powder);
+  color: var(--ink);
   font-weight: 600;
   margin: 0.15rem;
   padding: 0.5rem 0.9rem;
@@ -114,8 +115,8 @@ b {
 }
 
 .footer-custom {
-  background-color: var(--navy);
-  color: #c9d8e6;
+  background-color: var(--ink);
+  color: var(--powder);
   padding: 2.5rem 0;
 }
 
@@ -127,7 +128,21 @@ b {
 }
 
 .footer-custom a:hover {
-  color: #8fc1e9;
+  color: var(--accent);
+}
+
+/* Burnt-peach accent button (hero call to action) */
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: #d95b3e;
+  border-color: #d95b3e;
+  color: #ffffff;
 }
 
 .resume-section + .resume-section {

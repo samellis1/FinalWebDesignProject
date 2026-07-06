@@ -22,9 +22,9 @@
       --window-bg: rgba(246, 247, 249, 0.86);
       --window-border: rgba(255, 255, 255, 0.55);
       --titlebar: rgba(236, 238, 242, 0.7);
-      --ink: #1d1d1f;
-      --muted: #6b7280;
-      --accent: #2f80c2;
+      --ink: #293241;
+      --muted: #5f6b7a;
+      --accent: #ee6c4d;
     }
 
     html, body {
@@ -40,7 +40,7 @@
     #desktop {
       position: fixed;
       inset: 0;
-      background: #6b7d8c url("images/wallpaper.jpg") center center / cover no-repeat;
+      background: #3d5a80 url("images/wallpaper.jpg") center center / cover no-repeat;
     }
     /* soft brightening + peach vignette to match the reference vibe */
     #desktop::before {
@@ -48,7 +48,7 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0) 40%, rgba(255, 224, 214, 0.35) 100%),
+        radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0) 40%, rgba(238, 108, 77, 0.28) 100%),
         linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.12));
       pointer-events: none;
     }
@@ -66,8 +66,8 @@
     }
     .icon:hover { background: rgba(255, 255, 255, 0.12); }
     .icon.selected {
-      background: rgba(80, 140, 220, 0.35);
-      border-color: rgba(180, 210, 245, 0.6);
+      background: rgba(61, 90, 128, 0.4);
+      border-color: rgba(152, 193, 217, 0.6);
     }
     .icon .glyph {
       width: 64px;
@@ -94,7 +94,7 @@
       border-radius: 4px;
       display: inline-block;
     }
-    .icon.selected .label { background: rgba(40, 110, 200, 0.9); text-shadow: none; }
+    .icon.selected .label { background: rgba(61, 90, 128, 0.95); text-shadow: none; }
 
     /* ---- Windows (Finder-style) ---- */
     .window {
@@ -165,7 +165,7 @@
     .entry + .entry { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.07); }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
     .chip {
-      background: #e3eef7; color: #14406b; font-weight: 600;
+      background: #98c1d9; color: #293241; font-weight: 600;
       font-size: 12.5px; padding: 6px 12px; border-radius: 999px;
     }
     .btn-row { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -229,8 +229,8 @@
     /* gradient dock tiles */
     .d-li { background: linear-gradient(135deg,#0a66c2,#0a85ed); color:#fff; }
     .d-gh { background: linear-gradient(135deg,#333,#111); color:#fff; }
-    .d-mail { background: linear-gradient(135deg,#4aa3ff,#1f7be0); color:#fff; }
-    .d-res { background: linear-gradient(135deg,#ff9f43,#ff6f3c); color:#fff; }
+    .d-mail { background: linear-gradient(135deg,#98c1d9,#3d5a80); color:#fff; }
+    .d-res { background: linear-gradient(135deg,#ee6c4d,#d95b3e); color:#fff; }
     .d-game { background: linear-gradient(135deg,#34d399,#10b981); color:#fff; }
 
     /* hint toast */
